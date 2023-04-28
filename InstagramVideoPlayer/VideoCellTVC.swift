@@ -9,6 +9,10 @@ import UIKit
 
 class VideoCellTVC: UITableViewCell {
 
+    //MARK: Cell Outlets
+    @IBOutlet weak var videoPlayerCell: UIView!
+    
+    
     //MARK: awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()

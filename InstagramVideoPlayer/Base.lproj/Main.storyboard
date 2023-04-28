@@ -19,8 +19,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJf-FL-e1H">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssZ-Tp-TP2">
+                                        <rect key="frame" x="132.66666666666666" y="0.0" width="127.66666666666666" height="48"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ud-Rv-qZV">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="58" width="393" height="701"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VideoCellTVC" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCellTVC" rowHeight="257" id="oAI-oU-HG2" customClass="VideoCellTVC" customModule="InstagramVideoPlayer" customModuleProvider="target">
@@ -29,15 +35,44 @@
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAI-oU-HG2" id="1Zs-8r-qMq">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="257"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-wT-OZb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="257"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-gC-r8q">
+                                                                    <rect key="frame" x="10" y="10" width="373" height="237"/>
+                                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="gfG-gC-r8q" firstAttribute="top" secondItem="xm1-wT-OZb" secondAttribute="top" constant="10" id="2Sr-VK-FbT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gfG-gC-r8q" secondAttribute="trailing" constant="10" id="QrW-NZ-RKz"/>
+                                                                <constraint firstItem="gfG-gC-r8q" firstAttribute="leading" secondItem="xm1-wT-OZb" secondAttribute="leading" constant="10" id="kcc-an-Juv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gfG-gC-r8q" secondAttribute="bottom" constant="10" id="ybC-SE-1Xn"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="xm1-wT-OZb" secondAttribute="bottom" id="Fiz-40-q9n"/>
+                                                        <constraint firstItem="xm1-wT-OZb" firstAttribute="leading" secondItem="1Zs-8r-qMq" secondAttribute="leading" id="X0d-iR-HaH"/>
+                                                        <constraint firstItem="xm1-wT-OZb" firstAttribute="top" secondItem="1Zs-8r-qMq" secondAttribute="top" id="lMT-nd-Y2s"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xm1-wT-OZb" secondAttribute="trailing" id="rjh-7O-DNA"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="videoPlayerCell" destination="xm1-wT-OZb" id="YwT-h9-0Je"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="ssZ-Tp-TP2" firstAttribute="centerX" secondItem="NJf-FL-e1H" secondAttribute="centerX" id="2d1-7E-vZe"/>
                                     <constraint firstAttribute="bottom" secondItem="2Ud-Rv-qZV" secondAttribute="bottom" id="5VC-Mn-2ST"/>
-                                    <constraint firstItem="2Ud-Rv-qZV" firstAttribute="top" secondItem="NJf-FL-e1H" secondAttribute="top" id="JID-Hp-aKR"/>
+                                    <constraint firstItem="2Ud-Rv-qZV" firstAttribute="top" secondItem="ssZ-Tp-TP2" secondAttribute="bottom" constant="10" id="PWt-xC-RmA"/>
+                                    <constraint firstItem="ssZ-Tp-TP2" firstAttribute="top" secondItem="NJf-FL-e1H" secondAttribute="top" id="XhU-uS-ZCV"/>
                                     <constraint firstAttribute="trailing" secondItem="2Ud-Rv-qZV" secondAttribute="trailing" id="aSl-LB-osx"/>
                                     <constraint firstItem="2Ud-Rv-qZV" firstAttribute="leading" secondItem="NJf-FL-e1H" secondAttribute="leading" id="yeb-PO-Lp4"/>
                                 </constraints>
@@ -64,6 +99,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
