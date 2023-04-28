@@ -36,11 +36,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCellTVC") as? VideoCellTVC else {
             return UITableViewCell()
         }
+        
+        cell.videoPlayerView.layer.cornerRadius = 12
+        cell.videoPlayerView.layer.masksToBounds = true
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 250
     }
     
 }

@@ -62,6 +62,7 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="videoPlayerCell" destination="xm1-wT-OZb" id="YwT-h9-0Je"/>
+                                                    <outlet property="videoPlayerView" destination="gfG-gC-r8q" id="M9B-pC-4SO"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
