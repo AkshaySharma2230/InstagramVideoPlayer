@@ -39,7 +39,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-wT-OZb">
                                                             <rect key="frame" x="0.0" y="0.0" width="393" height="257"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-gC-r8q">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-gC-r8q" customClass="VideoPlayerView" customModule="InstagramVideoPlayer" customModuleProvider="target">
                                                                     <rect key="frame" x="10" y="10" width="373" height="237"/>
                                                                     <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                                 </view>
@@ -62,7 +62,7 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="videoPlayerCell" destination="xm1-wT-OZb" id="YwT-h9-0Je"/>
-                                                    <outlet property="videoPlayerView" destination="gfG-gC-r8q" id="M9B-pC-4SO"/>
+                                                    <outlet property="videoPlayerView" destination="gfG-gC-r8q" id="Ddr-u0-lvI"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

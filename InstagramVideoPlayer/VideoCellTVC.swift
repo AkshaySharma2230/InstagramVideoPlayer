@@ -11,7 +11,7 @@ class VideoCellTVC: UITableViewCell {
 
     //MARK: Cell Outlets
     @IBOutlet weak var videoPlayerCell: UIView!
-    @IBOutlet weak var videoPlayerView: UIView!
+    @IBOutlet weak var videoPlayerView: VideoPlayerView!
     
     
     //MARK: awakeFromNib
