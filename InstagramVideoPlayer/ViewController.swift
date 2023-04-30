@@ -39,7 +39,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.videoPlayerView.layer.cornerRadius = 12
         cell.videoPlayerView.layer.masksToBounds = true
-        
+        //
+        let videoURLString = "" // Enter video url here
+        guard let videoURL = URL(string: videoURLString) else { return cell }
+        cell.videoPlayerView.configure(with: videoURL)
         return cell
     }
     
