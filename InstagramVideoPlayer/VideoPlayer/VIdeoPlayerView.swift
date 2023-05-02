@@ -72,11 +72,11 @@ class VideoPlayerView: UIView {
         }
     }
     
-    
     private func setupPlayerLayer() {
         guard let playerLayer = playerLayer else { return }
         layer.addSublayer(playerLayer)
         playerLayer.videoGravity = .resizeAspectFill
+        
         addSubview(playPauseButton)
         playPauseButton.center = center
         playPauseButton.layer.zPosition = 1

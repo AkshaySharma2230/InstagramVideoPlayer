@@ -12,6 +12,9 @@ class VideoCellTVC: UITableViewCell {
     //MARK: Cell Outlets
     @IBOutlet weak var videoPlayerCell: UIView!
     @IBOutlet weak var videoPlayerView: VideoPlayerView!
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var heartBtn: UIButton!
+    @IBOutlet weak var heartImageView: UIImageView!
     
     
     //MARK: awakeFromNib
@@ -20,7 +23,6 @@ class VideoCellTVC: UITableViewCell {
         // Initialization code
     }
 
-    
     //MARK: SetSelected
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
