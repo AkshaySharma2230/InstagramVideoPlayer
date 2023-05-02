@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //MARK: Adding Delegate & DataSource of TableView
         videoTableView.delegate = self
         videoTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-
 
 }
 
