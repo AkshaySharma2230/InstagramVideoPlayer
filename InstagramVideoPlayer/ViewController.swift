@@ -40,14 +40,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.videoPlayerView.layer.cornerRadius = 12
         cell.videoPlayerView.layer.masksToBounds = true
         //
-        let videoURLString = "" // Enter video url here
+        let videoURLString = "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_5MB.mp4" // Enter video url here
         guard let videoURL = URL(string: videoURLString) else { return cell }
         cell.videoPlayerView.configure(with: videoURL)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        var cell = tableView.cellForRow(at: indexPath)
+        return cell?.frame.height ?? 450
     }
     
 }
